@@ -1,0 +1,68 @@
+:root {
+    --primary: #ff3e3e; /* Gym Red */
+    --dark: #1a1a1a;
+    --light: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+
+body { background-color: var(--dark); color: var(--light); }
+
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; background: rgba(0,0,0,0.8); position: sticky; top: 0;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: var(--primary); }
+
+.status { padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+.open { background: #2ecc71; color: white; }
+.closed { background: var(--primary); color: white; }
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+}
+
+h1 { font-size: 3.5rem; margin-bottom: 10px; line-height: 1; }
+
+.btn {
+    display: inline-block; padding: 15px 30px; background: var(--primary);
+    color: white; text-decoration: none; font-weight: bold; border-radius: 5px;
+    margin-top: 20px; transition: 0.3s;
+}
+.btn:hover { transform: scale(1.05); background: #e63535; }
+
+.pricing { padding: 50px 5%; text-align: center; }
+.grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+
+.card {
+    background: #252525; padding: 30px; border-radius: 10px; width: 300px;
+    border: 1px solid #333;
+}
+.featured { border: 2px solid var(--primary); transform: scale(1.05); }
+.price { font-size: 2rem; font-weight: bold; color: var(--primary); margin: 15px 0; }
+.save { color: #2ecc71; font-size: 0.9rem; margin-bottom: 10px; }
+ul { list-style: none; color: #bbb; line-height: 2; }
+.form-group input, .form-group select {
+    width: 100%; padding: 15px; background: #222; border: 1px solid #444;
+    color: white; border-radius: 5px; font-size: 1rem;
+}
+
+.form-group input:focus { border-color: var(--primary); outline: none; }
+.btn-map {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 30px;
+    background: #2196F3; /* Blue color to match Google Maps */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: BOLD;
+    text-align: center;
+}
+
