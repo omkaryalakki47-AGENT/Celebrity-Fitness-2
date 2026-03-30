@@ -1,0 +1,60 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELEBRITY FITNESS| Professional Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CELEBRITY<span>FITNESS</span></div>
+        <div id="status-tag" class="status">CHECKING...</div>
+    </nav>
+<section class="contact">
+    <h2>Book a Free Trial</h2>
+    
+    <div id="gym-form">
+        <div class="form-group">
+            <input type="text" id="cust-name" placeholder="Your Full Name" required>
+        </div>
+        
+        <div class="form-group">
+            <select id="cust-goal">
+                <option value="Weight Loss">Weight Loss</option> <option value="HEIGHT INCREASE">height increase</option>
+        
+        <input type="hidden" name="subject" value="New Gym Lead from PowerHouse App">
+
+
+        <input type="hidden" name="fr
+
+        <button onclick="sendDetailsToTrainer()" class="btn">SEND MY DETAILS</button>
+    </div>
+</section>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>BUILD YOUR <br>ULTIMATE BODY</h1>
+            <p>Professional equipment. Expert trainer. Zero excuses.</p>        
+
+        </div> 
+</header>
+      <a href="https://www.google.com/maps/search/?api=1&query=Gyms+in+Sedam+Karnataka" 
+   target="_blank" 
+   class="btn-map">
+   VIEW GYM LOCATION
+</a>
+<section class="gym-photos">
+    <h2>Explore Our Training Space</h2>
+    
+    <div class="photo-grid">
+        <div class="photo-card">
+            <h3>Galaxy Gym</h3>
+            <p>See our equipment and workout area.</p>
+            <a href="https://maps.google.com/?cid=3893076876950051530&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn">VIEW PHOTOS</a>
+        </div>
+
+        
+</body>
+</html>
