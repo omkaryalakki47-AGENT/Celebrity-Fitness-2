@@ -1,0 +1,120 @@
+function updateGymStatus() {
+    const statusTag = document.getElementById('status-tag');
+    const now = new Date();
+    const hour = now.getHours(); // Returns 0-23
+
+    // Setting Gym hours: 6 AM (6) to 10 PM (22)
+    const openHour = 6;
+    const closeHour = 22;
+
+    if (hour >= openHour && hour < closeHour) {
+        statusTag.textContent = "● OPEN NOW";
+        statusTag.className = "status open";
+    } else {
+        statusTag.textContent = "● CLOSED (Opens at 6AM)";
+        statusTag.className = "status closed";
+    }
+}
+
+// Run immediately on load
+updateGymStatus();
+
+// Update every 1 minute to stay "Real-Time"
+setInterval(updateGymStatus, 60000);
+function openWhatsApp() {
+    const phone = "919902837507";
+    const message = "Hi! I saw your Gym website. I want to join. Can I get a free trial?";
+    
+    // This encodes the text so there are no illegal characters (like spaces)
+    const encodedMsg = encodeURIComponent(message);
+    
+    // We use the 'api' link instead of 'wa.me' because it's more stable in 2026
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMsg}`;
+
+    // The 'Safe Redirect' logic:
+    // It opens in a new tab first, which prevents the main page from going white
+    const newWindow = window.open(whatsappUrl, '_blank');
+    
+    if (newWindow) {
+        newWindow.focus();
+    } else {
+        // If the browser blocks the popup, we redirect the current tab as a fallback
+        window.location.href = whatsappUrl;
+    }
+}
+function sendDetailsToTrainer() {
+    // 1. Get the values the user typed in
+    const name = docfunction updateGymStatus() {
+    const statusTag = document.getElementById('status-tag');
+    const now = new Date();
+    const hour = now.getHours(); // Returns 0-23
+
+    // Setting Gym hours: 6 AM (6) to 10 PM (22)
+    const openHour = 6;
+    const closeHour = 22;function updateGymStatus() {
+    const statusTag = document.getElementById('status-tag');
+    const now = new Date();
+    const hour = now.getHours(); // Returns 0-23
+
+    // Setting Gym hours: 6 AM (6) to 10 PM (22)
+    const openHour = 6;
+    const closeHour = 22;
+
+    if (hour >= openHour && hour < closeHour) {
+        statusTag.textContent = "● OPEN NOW";
+        statusTag.className = "status open";
+    } else {
+        statusTag.textContent = "● CLOSED (Opens at 6AM)";
+        statusTag.className = "status closed";
+    }
+}
+
+// Run immediately on load
+updateGymStatus();
+
+// Update every 1 minute to stay "Real-Time"
+setInterval(updateGymStatus, 60000);
+function openWhatsApp() {
+    const phone = "919902837507";
+    const message = "Hi! I saw your Gym website. I want to join. Can I get a free trial?";
+    
+    // This encodes the text so there are no illegal characters (like spaces)
+    const encodedMsg = encodeURIComponent(message);
+    
+    // We use the 'api' link instead of 'wa.me' because it's more stable in 2026
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMsg}`;
+
+    // The 'Safe Redirect' logic:
+    // It opens in a new tab first, which prevents the main page from going white
+    const newWindow = window.open(whatsappUrl, '_blank');
+    
+    if (newWindow) {
+        newWindow.focus();
+    } else {
+        // If the browser blocks the popup, we redirect the current tab as a fallback
+        window.location.href = whatsappUrl;
+    }
+}function sendDetailsToTrainer() {
+    // 1. Get the values the user typed in
+    const name = document.getElementById('cust-name').value;
+    const goal = document.getElementById('cust-goal').value;
+    const trainerNum = "919902837507"; // The number you providedument.getElementById('cust-name').value;
+    const goal = document.getElementById('cust-goal').value;
+    const trainerNum = "919902837507"; // The number you provided
+
+    // 2. Check if the name is empty
+    if (name === "") {
+        alert("Please enter your name first!");
+        return;
+    }
+
+    // 3. Create the professional message
+    const message = `Hi! My name is ${name}. I want to join the gym for ${goal}. Please send me the joining details.`;
+    
+    // 4. Encode and Redirect to WhatsApp
+    const encodedMsg = encodeURIComponent(message);
+    const finalUrl = `https://api.whatsapp.com/send?phone=${trainerNum}&text=${encodedMsg}`;
+
+    // 5. Open WhatsApp
+    window.open(finalUrl, '_top');
+}
